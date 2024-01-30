@@ -86,8 +86,12 @@ double rateCalculation(double numberOfInstallments, double equatedInstallment, d
 }
 
 
-int main(void) {
+int main(int argc, char *argv[]) {
 
-    printf("%0.20f\n",rateCalculation(5, 231, 1000));
+    double numberOfInstallments = atof(argv[1]);
+    double equatedInstallment = atof(argv[2]);
+    double Principal = atof(argv[3]);
+
+    printf("%.2f%%\n",rateCalculation(numberOfInstallments, equatedInstallment, Principal) * 100);
 
 }
